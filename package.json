@@ -1,0 +1,42 @@
+{
+  "name": "spencer-cli",
+  "version": "1.0.0",
+  "description": "spencer client side",
+  "main": "./src/app.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec ts-node src/server.ts",
+    "lint": "eslint 'src/**/*.ts'",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaffaBux/SpencerCLI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RaffaBux/SpencerCLI/issues"
+  },
+  "homepage": "https://github.com/RaffaBux/SpencerCLI#Readme",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.2.3",
+    "dotenv": "^17.3.1",
+    "eslint": "^10.0.0",
+    "express": "^5.2.1",
+    "install": "^0.13.0",
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.11",
+    "npm": "^11.10.0",
+    "prettier": "^3.8.1",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
