@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { type Item, request } from "../../config/api";
+import { request } from "../../config/api";
+import { Item } from '../../structures//classes/Item';
 import "./App.css";
 
 type Route = "home" | "items" | "create";
@@ -9,7 +10,7 @@ export default function App() {
 
   return (
     <div id="app">
-      <h2>Items Client</h2>
+      <h2>Spencer Client</h2>
 
       <nav style={{ marginBottom: 12 }}>
         <button onClick={() => setRoute("home")}>Home</button>{" "}
@@ -38,8 +39,8 @@ function ItemsPage() {
     setError("");
     setItems(null);
     try {
-      const data = await request<Item[]>("", { method: "GET" });
-      setItems(data);
+      const data = await request<any[]>("", { method: "GET" });
+      setItems(data.map((raw) => Item.fromApi(raw)));
     } catch (e) {
       setError(String(e));
     }
@@ -56,7 +57,9 @@ function ItemsPage() {
     <>
       <h3>All items</h3>
       <button onClick={load}>Refresh</button>
-      <pre style={{ textAlign: "left" }}>{JSON.stringify(items, null, 2)}</pre>
+      <div id='item-list-container'>
+        {items.map((item) => item.getItemComponent())}
+      </div>
     </>
   );
 }

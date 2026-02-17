@@ -1,6 +1,6 @@
 import config from "./config";
 
-export type Item = { id: number; name: string };
+
 
 const API_BASE = `http://localhost:${config.serverPort}${config.apiUrl}`;
 

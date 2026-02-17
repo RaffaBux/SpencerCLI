@@ -13,16 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -47,4 +37,10 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+#item-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
