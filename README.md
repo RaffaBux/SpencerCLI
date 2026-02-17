@@ -1,9 +1,5 @@
-# Spencer - Typescript Node Express application
+# Spencer - Typescript Node React/Vite application
 
 Start the application running:
 
 ```npm run dev```
-
-Run following command to start all tests:
-
-```npm test```
