@@ -1,4 +1,4 @@
-import ItemComponent from "../../components/ItemComponent/ItemComponent";
+import { ButtonItemComponent, ItemComponent } from "../../components/ItemComponent/ItemComponent";
 
 export class Item {
   public id: number;
@@ -25,6 +25,12 @@ export class Item {
   getItemComponent() {
     return (
       <ItemComponent item={this} />
+    );
+  }
+
+  getButtonItemComponent(callback?: () => void) {
+    return (
+      <ButtonItemComponent key={this.id} item={this} callback={() => callback ? callback() : undefined}/>
     );
   }
 

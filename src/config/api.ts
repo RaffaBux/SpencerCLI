@@ -1,7 +1,5 @@
 import config from "./config";
 
-
-
 const API_BASE = `http://localhost:${config.serverPort}${config.apiUrl}`;
 
 export async function request<T>(path: string, init?: RequestInit): Promise<T> {
