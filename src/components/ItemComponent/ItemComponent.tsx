@@ -1,12 +1,12 @@
 import { Item } from '../../structures/classes/Item';
-import { request } from "../../config/api";
-import "./ItemComponent.css";
+import { request } from '../../config/api';
+import './ItemComponent.css';
 
 export function ButtonItemComponent({ item, callback }: { item: Item, callback?: () => void }) {
   async function withdraw() {
     try {
       const created = await request<Item>(`/withdraw/${item.id}`, {
-        method: "POST",
+        method: 'POST',
         body: JSON.stringify({ id: item.id }),
       });
 

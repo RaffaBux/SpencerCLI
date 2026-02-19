@@ -3,3 +3,26 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+.scanner-container {
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+  align-items: center;
+}
+
+.scanner-config-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #ffffff;
+}
+
+.scanned-element-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

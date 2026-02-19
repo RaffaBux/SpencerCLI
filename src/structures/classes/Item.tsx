@@ -1,4 +1,4 @@
-import { ButtonItemComponent, ItemComponent } from "../../components/ItemComponent/ItemComponent";
+import { ButtonItemComponent, ItemComponent } from '../../components/ItemComponent/ItemComponent';
 
 export class Item {
   public id: number;
